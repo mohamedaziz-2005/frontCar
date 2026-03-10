@@ -1,0 +1,287 @@
+/* ==================== Command.css - Matches Your Component Class Names ==================== */
+
+/* AddCommand Component */
+.addcommand {
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* CommandCard Component */
+.Card {
+    border: none !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.Card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.cardbody {
+    padding: 1.5rem !important;
+    position: relative;
+    background: white;
+}
+
+.cardtitle {
+    color: #2c3e50 !important;
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 1rem !important;
+    border-left: 4px solid #667eea;
+    padding-left: 1rem;
+}
+
+.cardtext {
+    color: #666 !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.elstatus {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Status colors - using classes instead of :contains */
+.elstatus.accepted {
+    background: #06d6a0 !important;
+    color: white !important;
+}
+
+.elstatus.rejected {
+    background: #ef476f !important;
+    color: white !important;
+}
+
+.elstatus.pending {
+    background: #ffd166 !important;
+    color: #2c3e50 !important;
+}
+
+/* Button styles */
+.button {
+    border: none !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0.25rem !important;
+}
+
+.button.delete {
+    background-color: #ef476f !important;
+    border: none !important;
+    color: white !important;
+}
+
+.button.delete:hover {
+    background-color: #d43f5a !important;
+    transform: translateY(-2px);
+}
+
+.accepte {
+    background-color: #06d6a0 !important;
+    border: none !important;
+    color: white !important;
+}
+
+.accepte:hover {
+    background-color: #05b586 !important;
+    transform: translateY(-2px);
+}
+
+.reject {
+    background-color: #ef476f !important;
+    border: none !important;
+    color: white !important;
+}
+
+.reject:hover {
+    background-color: #d43f5a !important;
+    transform: translateY(-2px);
+}
+
+.edite22 {
+    background-color: #667eea !important;
+    border: none !important;
+    color: white !important;
+}
+
+.edite22:hover {
+    background-color: #5a67d8 !important;
+    transform: translateY(-2px);
+}
+
+/* CommandsList Component */
+.divlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* MyCommandesList Component */
+.mucommand {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Section header for MyCommandesList */
+.mucommand::before {
+    content: "My Commands";
+    display: block;
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #667eea;
+}
+
+/* EditeCommand Component */
+.iamge12, .text12 {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.image13, .text13 {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.image13:focus, .text13:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.submit12 {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit12:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .divlist, .mucommand {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+    
+    .cardtitle {
+        font-size: 1.1rem !important;
+    }
+    
+    .elstatus {
+        position: static;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+    
+    .button {
+        width: 100%;
+        margin: 0.25rem 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .Card {
+        margin: 0.5rem;
+    }
+    
+    .cardbody {
+        padding: 1rem !important;
+    }
+}
+
+/* Loading state */
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.loading::after {
+    content: "...";
+    animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: "."; }
+    40% { content: ".."; }
+    60%, 100% { content: "..."; }
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: #999;
+    font-size: 1.2rem;
+}
+
+/* Animation for cards */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Card {
+    animation: fadeIn 0.5s ease;
+}   
